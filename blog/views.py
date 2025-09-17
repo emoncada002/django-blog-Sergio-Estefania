@@ -4,7 +4,8 @@ from .models import Post
 
 # Create your views here.
 
-class StartingPageView(ListView) :
+
+class StartingPageView(ListView):
     template_name = "blog/index.html"
     model = Post
     ordering = ["-date"]
@@ -15,6 +16,7 @@ class StartingPageView(ListView) :
         data = queryset[:3]
         return data
 
+
 '''def starting_page(request):
     latest_posts = Post.objects.all().order_by("-date")[:3]
     #sorted_posts = sorted(all_posts, key=get_date)
@@ -23,11 +25,13 @@ class StartingPageView(ListView) :
       "posts": latest_posts
     })'''
 
-class AllPostsView(ListView) :
+
+class AllPostsView(ListView):
     template_name = "blog/all-posts.html"
     model = Post
     ordering = ["-date"]
     context_object_name = "all_posts"
+
 
 '''def posts(request):
     all_posts = Post.objects.all()
@@ -35,7 +39,8 @@ class AllPostsView(ListView) :
       "all_posts": all_posts
     })'''
 
-class SinglePostView(DetailView) :
+
+class SinglePostView(DetailView):
     template_name = "blog/post-detail.html"
     model = Post
 
