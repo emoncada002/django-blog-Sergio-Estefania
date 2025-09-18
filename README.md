@@ -1,5 +1,7 @@
 Proyecto de realizado por Sergio Salcedo y Estefania Moncada
 
+COMANDOS PARA MAC:
+
 python3 -m venv .venv
 
 source .venv/bin/activate
