@@ -21,7 +21,7 @@
 
 .post img {
   width: 20rem;
-  height: auto;
+  height: 20 rem;
   object-fit: cover;
   border-radius: 1rem;
 }
